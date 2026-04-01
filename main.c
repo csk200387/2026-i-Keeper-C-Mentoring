@@ -1,22 +1,29 @@
 #include <stdio.h>
 
 int main() {
-    int h, m;
-    scanf("%d %d", &h, &m);
+    int a, b, c;
+    scanf("%d %d %d", &a, &b, &c);
+    
+    if (a > b && a > c && b > c)
+        printf("%d\n", b);
 
-    m -= 45;
+    if (b > c && b > a && a > c)
+        printf("%d\n", a);
 
-    if (m >= 0) { // m이 45 이상일 때
-        printf("%d %d", h, m);
-    } else {
-        m += 60;
-        h -= 1; // 여기서 자정이 들어왔을 때를 생각
-        
-        if (h < 0) { // 시간이 음수이면
-            h += 24;
+    if (c > a && c > b && b > a)
+        printf("%d\n", b);
+
+    if (a > b) {
+        if (a > c) {
+            if (b > c)
+                printf("%d\n", b);
+            else
+                printf("%d\n", c);
         }
 
-        printf("%d %d", h, m); // 최종 출력
+        if (b > c) {
+            if ()
+        }
+        }
     }
-
 }
